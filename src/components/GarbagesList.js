@@ -5,14 +5,14 @@ function GarbagesList() {
   const garbages = useSelector((state) => state.garbageReducer.garbages);
 
   return (
-    <div className="container">
-      <div className="row justify-content-md-center">
-        {garbages.map((garbage) => (
-          <div className="col">
-            <Thing key={garbage.id} thing={garbages} />
-          </div>
-        ))}
-      </div>
+    <div>
+      {garbages.map((garbage) => (
+        <Thing
+          key={garbage.id}
+          thing={garbage}
+          image="https://cdn.onlinewebfonts.com/svg/img_426243.png"
+        />
+      ))}
     </div>
   );
 }

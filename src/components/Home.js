@@ -9,7 +9,8 @@ const Home = () => {
 
   return (
     <>
-      {lastLocation &&
+      {user &&
+        lastLocation &&
         (lastLocation.pathname === "/signin" ||
           lastLocation.pathname === "/signup") && (
           <div className="alert alert-warning" role="alert">

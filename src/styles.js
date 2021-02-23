@@ -7,7 +7,7 @@ export const NavStyled = styled.nav`
 
 export const Logo = styled(Link)`
   img {
-    width: 8rem;
+    width: 4rem;
   }
 `;
 
@@ -26,21 +26,18 @@ export const UsernameStyled = styled.p`
 `;
 
 export const ItemWrapper = styled.div`
-  border-radius: 3px;
-  border-color: grey;
   display: inline-block;
-  padding: 50px;
-  margin-left: 57px;
-  margin-rigtt: 50px;
+  align-items: center;
+  margin: 10px;
   text-align: center;
 
   img {
-    width: 8em;
-    height: 8em;
+    width: 200px;
+    height: 200px;
   }
 
   p {
-    color: purple;
+    color: black;
   }
 `;
 

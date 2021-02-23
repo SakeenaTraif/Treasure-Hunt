@@ -13,7 +13,10 @@ const NavBar = () => {
   return (
     <NavStyled className="navbar navbar-expand">
       <Logo className="navbar-brand" to="/">
-        {/* <img src="" alt="logo" /> */}
+        <img
+          src="https://www.beconwiz.com/wp-content/uploads/2020/04/BCW-ICON-Treasure-Hunt-297x300.png"
+          alt="logo"
+        />
       </Logo>
 
       <div className="navbar-nav ml-auto">

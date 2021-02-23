@@ -13,14 +13,14 @@ const TreasuresList = () => {
   if (!user) return <Redirect to="/" />;
 
   return (
-    <div className="container">
-      <div className="row">
-        {treasures.map((treasure) => (
-          <div className="col">
-            <Thing key={treasure.id} thing={treasure} />
-          </div>
-        ))}
-      </div>
+    <div>
+      {treasures.map((treasure) => (
+        <Thing
+          key={treasure}
+          thing={treasure}
+          image="https://cdn.onlinewebfonts.com/svg/img_539612.png"
+        />
+      ))}
     </div>
   );
 };
