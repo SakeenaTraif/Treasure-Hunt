@@ -15,11 +15,16 @@ const NavBar = () => {
       <Logo className="navbar-brand" to="/">
         {/* <img src="" alt="logo" /> */}
       </Logo>
+
       <div className="navbar-nav ml-auto">
         {user ? (
           <>
             <UsernameStyled>Hello, {user.username}! </UsernameStyled>
-            <FiLogOut onClick={() => dispatch(signout())} color="red" />
+            <FiLogOut
+              onClick={() => dispatch(signout())}
+              color="yellow"
+              size="1.5em"
+            />
           </>
         ) : (
           <>

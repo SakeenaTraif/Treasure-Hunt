@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signup } from "../store/actions/authActions";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -18,15 +18,21 @@ const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(signup(user, history));
+    return (
+      <div class="alert alert-primary" role="alert">
+        This is a primary alert—check it out!
+      </div>
+    );
   };
 
   return (
     <div className="container">
-      <h3>Signup</h3>
+      <h3>Sign up</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Username</label>
           <input
+            required
             name="username"
             value={user.username}
             type="text"
@@ -35,21 +41,23 @@ const Signup = () => {
           />
         </div>
         <div className="form-group">
-          <label>Email</label>
+          <label>Password</label>
           <input
-            name="email"
-            value={user.email}
-            type="email"
+            required
+            name="password"
+            value={user.password}
+            type="password"
             className="form-control"
             onChange={handleChange}
           />
         </div>
         <div className="form-group">
-          <label>Password</label>
+          <label>Email</label>
           <input
-            name="password"
-            value={user.password}
-            type="password"
+            required
+            name="email"
+            value={user.email}
+            type="email"
             className="form-control"
             onChange={handleChange}
           />
@@ -58,6 +66,9 @@ const Signup = () => {
           Sign up
         </button>
       </form>
+      <Link to="/signin">
+        <p>Already have an Account?</p>
+      </Link>
     </div>
   );
 };
