@@ -1,13 +1,13 @@
-import {combineReducers} from "redux";
+import { combineReducers } from "redux";
 
 import treasureReducer from "./treasureReducer";
-import randomReducer from "./randomReducer";
+import garbageReducer from "./garbageReducer";
 import authReducer from "./authReducer";
 
 const rootReducer = combineReducers({
-    randomReducer,
-    treasureReducer,
-    authReducer,
+  garbageReducer,
+  treasureReducer,
+  authReducer,
 });
 
 export default rootReducer;

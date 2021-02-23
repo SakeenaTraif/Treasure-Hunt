@@ -1,8 +1,8 @@
 // Auth Types
 export const SET_USER = "SET_USER";
 
-// Shop TYPES
+// Treasure Types
 export const FETCH_TREASURE = "FETCH_TREASURE";
 
-// Random TYPES
-export const FETCH_RANDOM = "FETCH_RANDOM";
+// Garbage TYPES
+export const FETCH_GARBAGE = "FETCH_GARBAGE";

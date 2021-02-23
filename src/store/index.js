@@ -1,12 +1,11 @@
-import {fetchRandoms} from "./actions/randomActions";
-import {fetchTreasures} from "./actions/treasureActions";
-import {applyMiddleware,compose, createStore} from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import reducer from "./reducers";
+import { fetchGarbages } from "./actions/garbageActions";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, composeEnhancers(applyMiddleware (thunk)));
-store.dispatch(fetchRandoms());
-store.dispatch(fetchTreasures());
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
+
+store.dispatch(fetchGarbages());
 
 export default store;

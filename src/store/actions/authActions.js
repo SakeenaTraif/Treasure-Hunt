@@ -3,7 +3,7 @@ import decode from "jwt-decode";
 import * as types from "./types";
 
 const setUser = (token) => {
-  localStorage.setItem("myToken", token);
+  localStorage.setItem("token", token);
   return {
     type: types.SET_USER,
     payload: decode(token),
@@ -26,8 +26,6 @@ export const signin = (userData, history) => {
   return async (dispatch) => {
     try {
       const res = await instance.post("/signin", userData);
-    //   console.log(decode(res.data.token));
-
       dispatch(setUser(res.data.token));
       history.replace("/");
     } catch (error) {
@@ -37,7 +35,7 @@ export const signin = (userData, history) => {
 };
 
 export const signout = () => {
-  localStorage.removeItem("myToken");
+  localStorage.removeItem("token");
   return {
     type: types.SET_USER,
     payload: null,
@@ -45,7 +43,7 @@ export const signout = () => {
 };
 
 export const checkForToken = () => (dispatch) => {
-  const token = localStorage.getItem("myToken");
+  const token = localStorage.getItem("token");
   if (token) {
     const user = decode(token);
     const currentTime = Date.now();

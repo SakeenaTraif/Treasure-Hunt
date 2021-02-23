@@ -1,4 +1,4 @@
-import { Logo, AuthButtonStyled, UsernameStyled, NavStyled} from "../styles";
+import { Logo, AuthButtonStyled, UsernameStyled, NavStyled } from "../styles";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { FiLogOut } from "react-icons/fi";
@@ -16,21 +16,21 @@ const NavBar = () => {
         {/* <img src="" alt="logo" /> */}
       </Logo>
       <div className="navbar-nav ml-auto">
-      {user ? (
-            <>
-              <UsernameStyled>Hello, {user.username}! </UsernameStyled>
-              <FiLogOut onClick={() => dispatch(signout())} color="red" />
-            </>
-          ) : (
-            <>
-      <Link to="/signup">
-            <AuthButtonStyled>Sign up</AuthButtonStyled>
-          </Link>
-          <Link to="/signin">
-            <AuthButtonStyled>Sign in</AuthButtonStyled>
-          </Link>
+        {user ? (
+          <>
+            <UsernameStyled>Hello, {user.username}! </UsernameStyled>
+            <FiLogOut onClick={() => dispatch(signout())} color="red" />
           </>
-          )}
+        ) : (
+          <>
+            <Link to="/signup">
+              <AuthButtonStyled>Sign up</AuthButtonStyled>
+            </Link>
+            <Link to="/signin">
+              <AuthButtonStyled>Sign in</AuthButtonStyled>
+            </Link>
+          </>
+        )}
       </div>
     </NavStyled>
   );

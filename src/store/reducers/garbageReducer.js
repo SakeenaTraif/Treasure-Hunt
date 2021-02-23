@@ -1,15 +1,15 @@
 import * as types from "../actions/types";
 
 const initialState = {
-  randoms:[],
+  garbages: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.FETCH_RANDOM:
-      return{
-      ...state,
-      randoms: action.payload.randoms,
+    case types.FETCH_GARBAGE:
+      return {
+        ...state,
+        garbages: action.payload,
       };
 
     default:

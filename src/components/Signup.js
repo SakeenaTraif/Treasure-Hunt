@@ -9,7 +9,7 @@ const Signup = () => {
   const [user, setUser] = useState({
     username: "",
     password: "",
-    email:"",
+    email: "",
   });
 
   const handleChange = (event) =>
@@ -43,7 +43,7 @@ const Signup = () => {
             className="form-control"
             onChange={handleChange}
           />
-          </div>
+        </div>
         <div className="form-group">
           <label>Password</label>
           <input

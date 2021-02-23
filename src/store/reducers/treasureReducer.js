@@ -1,15 +1,15 @@
 import * as types from "../actions/types";
 
 const initialState = {
-  treasures:[],
+  treasures: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case types.FETCH_TREASURE:
-      return{
-      ...state,
-      treasures: action.payload.treasures,
+      return {
+        ...state,
+        treasures: action.payload,
       };
 
     default:
