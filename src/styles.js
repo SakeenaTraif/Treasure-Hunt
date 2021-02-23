@@ -7,7 +7,7 @@ export const NavStyled = styled.nav`
 
 export const Logo = styled(Link)`
   img {
-    width: 4rem;
+    width: 3rem;
   }
 `;
 
@@ -22,7 +22,7 @@ export const AuthButtonStyled = styled.button`
 
 export const UsernameStyled = styled.p`
   padding: 0.25em 1em;
-  color: white;
+  color: black;
 `;
 
 export const ItemWrapper = styled.div`

@@ -18,6 +18,7 @@ const NavBar = () => {
           alt="logo"
         />
       </Logo>
+      <h4>Treasure Hunt!</h4>
 
       <div className="navbar-nav ml-auto">
         {user ? (
